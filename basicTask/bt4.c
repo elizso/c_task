@@ -20,7 +20,7 @@ int main(void) {
             printf("%0.4f \n", x_one);
         }else{
             if (isnan(x_one)){
-                printf("Disciminant is a negative number. \n");
+                printf("Discriminant is a negative number. \n");
             }else{
                 printf("%0.4f \n", x_one);
                 printf("%0.4f \n", x_two);
