@@ -4,10 +4,9 @@
 #include <time.h>
 #include <unistd.h>
 
-
-
 int main(){
     
+    system("clear");
     bool game = true;
     bool player = true; //if player is true = X, else = 0
     int place;
@@ -51,13 +50,13 @@ int main(){
                             }
                         }else if (j == 2){
                             if (i == place){
-                                board[i] == 'X' ? printf("\033[0;33mx"): printf("\033[0;33mo");
+                                board[i] == 'X' ? printf("\033[0;33mx"): printf("\033[0;35mo");
                             }else{
                                 printf("\033[0m%c", board[i]);
                             }
                         }else{
                             if (i == place){
-                                board[i] == 'X' ? printf("\033[1;33mX"): printf("\033[1;33mO");
+                                board[i] == 'X' ? printf("\033[1;33mX"): printf("\033[1;35mO");
                             }else{
                                 printf("\033[0m%c", board[i]);
                             } 
@@ -71,7 +70,6 @@ int main(){
                     if (j < 3){
                         system("clear");
                     }
-                    
 
                 }
                 
@@ -85,7 +83,7 @@ int main(){
                     system("clear");
                     for (int k = 0; k < 9; k++){
                         if (k == win[i][0] || k == win[i][1] || k == win[i][2]){
-                            printf("\033[0;31m%c", board[win[i][0]]);
+                            printf("\033[1;34m%c", board[win[i][0]]);
                         }else{
                             printf("\033[0m%c", board[k]);
                         }
